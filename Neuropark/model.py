@@ -4,10 +4,10 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # Load dataset
-data = pd.read_csv("data.csv")
+data = pd.read_csv("etv_dataset.csv")
 
-X = data[["pos_x","pos_y","pos_z","rot_x","rot_y","rot_z","depth"]]
-y = data["outcome"]
+X = data[["age","hydro_type","prior_shunt","ventricle_size","floor_thickness","basilar_distance","needle_depth","needle_angle","entry_x","entry_y"]]
+y = data["success"]
 
 # Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)

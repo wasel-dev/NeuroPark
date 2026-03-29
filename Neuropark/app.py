@@ -52,7 +52,7 @@ st.text(f"Depth: {depth:.3f}")
 def predict():
     st.session_state.is_sending = True
     st.session_state.last_result = "Sending..."
-    st.experimental_rerun()  # update UI immediately
+    st.rerun()  # update UI immediately
 
     # simulate network/model delay
     time.sleep(0.5)
